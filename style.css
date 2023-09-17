@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('wp7054610.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter:blur(10px);
+    margin: 0;
+    padding: 0;
+}
+
+.empty-container
+{
+    height: 100vh; width: auto;
+    padding-top: 100px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 30px;
+    margin: auto;
+    width: fit-content;
+    padding: 20px 40px 20px 40px;
+    background-color: #b0abab5a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 0px 20px 0px;
+}
+
+.left-image {
+    width: fit-content; height: fit-content;
+}
+.left-image img
+{
+    width: 370px;
+    display: block;
+    margin: auto;
+}
+
+.form-container {
+    padding: 20px;
+}
+.form-container h1
+{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #888;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding-top: 20px;
+}
+
+input[type="text"].filled + label,
+input[type="email"].filled + label {
+    top: -14px;
+    font-size: 12px;
+    color: #000000;
+}
+
+input[type="text"]:focus + label,
+input[type="email"]:focus + label
+{
+    top: -15px;
+    font-size: 14px;
+    color: #09164a;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #007BFF;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input [type="submit"]::after 
+{
+    content: '>';
+    color: white;
+    position: absolute;
+
+}
+
+input[type="submit"]:hover {
+    padding: 10px 60px  ;
+    transition: all ease-in-out 0.2s;
+}
+input[type="submit"]:hover::after
+{
+    content: '>';
+    color: white;
+}
+
+
+@media  (max-width: 600px) {
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .left-image img
+    {
+        width: 300px; height: 200px;
+    }
+    .form-container 
+    {
+        padding-top: 20px;
+    }
+    .form-container form label
+    {
+        left: 40px;
+    }
+    .form-container form input
+    {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    .form-container form  input[type="submit"] 
+    {
+        display: block;
+        margin:auto;
+        padding: 10px 50px;
+    }
+}
